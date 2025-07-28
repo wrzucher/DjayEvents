@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+	<LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    
+    <!-- Помечаем проект как анализатор/генератор -->
+    <OutputItemType>Analyzer</OutputItemType>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    
+    <EnforceExtendedAnalyzerRules>true</EnforceExtendedAnalyzerRules>
+    <!-- Генерация файлов для отладки -->
+    <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+    <CompilerGeneratedFilesOutputPath>Generated</CompilerGeneratedFilesOutputPath>
+    
+    <!-- NuGet метаданные -->
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>DjayEvents</PackageId>
+    <Version>0.0.1</Version>
+    <Authors>Wrzucher</Authors>
+    <Company>Bubo3</Company>
+    <Description>DjayEvents is a .NET library that automatically wires up events between services</Description>
+    <PackageTags>roslyn;source-generator;events;binding</PackageTags>
+    <RepositoryUrl>https://github.com/wrzucher/DjayEvents</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="4.14.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.7" />
+  </ItemGroup>
+
+</Project>
